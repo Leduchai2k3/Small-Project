@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --pink-color: #e26e70;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+		45deg,
+		rgb(65, 88, 208) 0%,
+		rgb(200, 80, 192) 50%,
+		rgb(255, 204, 112) 100%
+	);
+    overflow: hidden;
+}
+
+.openbtn, .modal{
+    display: flex;
+    justify-content: center;
+}
+
+.openbtn button{
+    position: fixed;
+    margin-top: 45vh;
+    padding: 20px 40px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #aba4a4;
+    background-color: #fff;
+    transition: 0.25s;
+
+}
+
+.openbtn:hover button{
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(0.9);
+}
+
+/* .modal{
+    opacity: 0;
+} */
+.hide{
+    display: none;
+
+}
+
+.modal{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    transition: 0.15s;
+}
+
+.tag{
+    animation: showModal linear 0.2s;
+    overflow: hidden;
+    width: 450px;
+    height: 201px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #fff;
+    margin: 200px auto;
+}
+
+@keyframes showModal {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.modal .header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--pink-color);
+    font-size: 17px;
+    padding: 15px;
+    color: white;
+}
+
+i {
+    margin-top: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+i:hover{
+    color: black;
+}
+
+.body{
+    margin: 12px 18px;
+    font-size: small;
+}
+
+.body h2{
+    color: var(--pink-color);
+}
+
+.footer{
+    padding: 15px;
+    text-align: right;
+}
+
+.footer button{
+    background-color: var(--pink-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.footer button:hover{
+    transform: scale(0.95);
+}
